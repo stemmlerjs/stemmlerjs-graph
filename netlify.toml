@@ -1,7 +1,7 @@
 [build]
-  command = "build"
+  command = "npm run build"
   functions = "functions"
-  environment = { NPM_VERSION = "10.0.0" }
+  environment = { NODE_VERSION = "10.0.0" }
 
 [context.production]
-  environment = { NPM_VERSION = "10.0.0" }
+  environment = { NODE_VERSION = "10.0.0" }
