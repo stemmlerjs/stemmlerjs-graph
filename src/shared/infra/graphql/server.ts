@@ -1,4 +1,5 @@
 
+import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda';
 import { ApolloServer, gql } from 'apollo-server';
 import { getCurrentSong } from '../../../modules/spotify/useCases/getCurrentSongPlaying';
 
@@ -39,9 +40,22 @@ const typeDefs = gql`
   }
 `
 
-const graphQLServer = new ApolloServer({
-  typeDefs,
-  resolvers
-});
+function createLambdaServer () {
+  return new ApolloServerLambda({
+    typeDefs,
+    resolvers,
+    introspection: true,
+    playground: true,
+  });
+}
 
-export { graphQLServer }
+function createServer () {
+  return new ApolloServer({
+    typeDefs,
+    resolvers,
+    introspection: true,
+    playground: true,
+  });
+}
+
+export { createLambdaServer, createServer }

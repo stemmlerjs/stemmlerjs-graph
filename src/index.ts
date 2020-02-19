@@ -1,7 +1,10 @@
 
 require('dotenv').config()
-import { graphQLServer } from "./shared/infra/graphql/server";
+import { createServer } from "./shared/infra/graphql/server";
+
+const graphQLServer = createServer();
 
 graphQLServer.listen().then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
-})
+});
+
