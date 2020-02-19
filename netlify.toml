@@ -1,3 +1,7 @@
 [build]
-  command = "echo 'We building out here, fam.'"
+  command = "build"
   functions = "functions"
+  environment = { NPM_VERSION = "10.0.0" }
+
+[context.production]
+  environment = { NPM_VERSION = "10.0.0" }

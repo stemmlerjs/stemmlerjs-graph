@@ -43,6 +43,7 @@ export class SpotifyService implements ISpotifyService {
   }
 
   public async exchangeCodeForAccessAndRefreshToken (code: string): Promise<SuccessfulGrantResponse> {
+    //@ts-ignore
     const params = new URLSearchParams();
 
     params.append('client_id', this.clientId)
@@ -67,6 +68,7 @@ export class SpotifyService implements ISpotifyService {
   }
 
   public async refreshAccessToken (): Promise<void> {
+    //@ts-ignore
     const params = new URLSearchParams();
 
     params.append('client_id', this.clientId)

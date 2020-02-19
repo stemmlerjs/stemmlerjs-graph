@@ -1,5 +1,5 @@
 
-import { createLambdaServer } from "../src/shared/infra/graphql/server";
+import { createLambdaServer } from "../dist/shared/infra/graphql/server";
 
 const graphQLServer = createLambdaServer();
 
