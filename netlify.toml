@@ -1,0 +1,3 @@
+[build]
+  command = "echo 'We building out here, fam.'"
+  functions = "functions"
