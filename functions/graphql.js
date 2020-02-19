@@ -1,5 +1,5 @@
 
-const { createLambdaServer } = require("../dist/shared/infra/graphql/server")
+const { createLambdaServer } = require("./dist/shared/infra/graphql/server")
 
 const graphQLServer = createLambdaServer();
 
