@@ -12,7 +12,7 @@ type SuccessfulGrantResponse = {
 }
 
 export interface ISpotifyService {
-  refreshAccessToken: () => Promise<void>;
+  getNewAccessTokenFromRefreshToken: () => Promise<void>;
   exchangeCodeForAccessAndRefreshToken: (code: string) => Promise<SuccessfulGrantResponse>;
   getCurrentlyPlayingSong: () => Promise<CurrentSongPlayingResult>;
 }
@@ -67,7 +67,7 @@ export class SpotifyService implements ISpotifyService {
     }
   }
 
-  public async refreshAccessToken (): Promise<void> {
+  public async getNewAccessTokenFromRefreshToken (): Promise<void> {
     //@ts-ignore
     const params = new URLSearchParams();
 
@@ -88,10 +88,9 @@ export class SpotifyService implements ISpotifyService {
   public async getCurrentlyPlayingSong (): Promise<any> {
  
     if (!this.hasAccessToken()) {
-      await this.refreshAccessToken();
+      await this.getNewAccessTokenFromRefreshToken();
     }
 
-    // TODO: If we don't have an access token already, then we're going to need to get one.
     // TODO: Test if the request fails because the token is invalid, we should try again after using the refresh token
 
     const response = await axios({

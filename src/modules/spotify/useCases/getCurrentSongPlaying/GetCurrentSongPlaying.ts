@@ -2,7 +2,7 @@
 import { UseCase } from "../../../../shared/core/useCase";
 import { ISpotifyService } from "../../services/spotifyService";
 import { GetCurrentSongPlayingResult } from "./GetCurrentSongPlayingResult";
-import { right, left } from "../../../../shared/core/Either";
+import { right, left } from "../../../../shared/core/either";
 
 export class GetCurrentSong implements UseCase<any, GetCurrentSongPlayingResult> {
 
