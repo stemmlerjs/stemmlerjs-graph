@@ -26,6 +26,7 @@ export class GetCurrentSong implements UseCase<any, GetCurrentSongPlayingResult>
       const song = await this.spotify.getCurrentlyPlayingSong();
       return right(song)
     } catch (err) {
+      console.log(err);
       return left(null);
     }
   }

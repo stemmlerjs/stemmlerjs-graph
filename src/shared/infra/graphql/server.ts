@@ -5,9 +5,10 @@ import { getCurrentSong } from '../../../modules/spotify/useCases/getCurrentSong
 
 const resolvers = {
   Query: {
+    // TODO: Let's apply some strict typing to these resolvers as well. 
     spotifyGetCurrentSongPlaying: async () => {
-      const currentSong = await getCurrentSong.execute();
-      return currentSong;
+      const currentSongResult = await getCurrentSong.execute();
+      return currentSongResult.isRight() ? currentSongResult.value : null
     }
   }
 }
