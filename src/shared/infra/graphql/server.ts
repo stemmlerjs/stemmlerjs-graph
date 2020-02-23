@@ -36,7 +36,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    spotifyGetCurrentSongPlaying: CurrentSongPlayingResult!
+    spotifyGetCurrentSongPlaying: CurrentSongPlayingResult
   }
 `
 
