@@ -41,7 +41,7 @@ export type CurrentSongPlayingResult = {
 
 export type Query = {
    __typename?: 'Query',
-  spotifyGetCurrentSongPlaying: CurrentSongPlayingResult,
+  spotifyGetCurrentSongPlaying?: Maybe<CurrentSongPlayingResult>,
 };
 
 
@@ -167,7 +167,7 @@ export type CurrentSongPlayingResultResolvers<ContextType = any, ParentType exte
 };
 
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = {
-  spotifyGetCurrentSongPlaying?: Resolver<ResolversTypes['CurrentSongPlayingResult'], ParentType, ContextType>,
+  spotifyGetCurrentSongPlaying?: Resolver<Maybe<ResolversTypes['CurrentSongPlayingResult']>, ParentType, ContextType>,
 };
 
 export interface UploadScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Upload'], any> {
