@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "nodemon",
+    "get-refresh-token": "ts-node scripts/get-refresh-token.ts",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "author": "",
