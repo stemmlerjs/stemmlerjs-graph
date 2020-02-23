@@ -101,6 +101,11 @@ export class SpotifyService implements ISpotifyService {
       }
     });
 
+    const isSongPlaying = !!response.data.item;
+    if (isSongPlaying) {
+      throw new Error("No song playing")
+    }
+
     return CurrentSongPlayingResultMap.toCurrentSongPlayingResult(response.data);
   }
 }
