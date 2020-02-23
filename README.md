@@ -4,9 +4,13 @@
 
 ![Personal Data Graph](https://user-images.githubusercontent.com/6892666/75119822-6b8f0c80-5654-11ea-9b14-4aee05a13cf5.png)
 
+One day, I thought it would be really cool to be able to show the current song that I'm listening to on Spotify on my website, like a true JAMstack champ. I realized that I needed a backend service to abstract the complexity of integrating with Spotify and I also needed it to _act_ as me. That feature led me to consider if there are other interesting intergrations that might be useful, and if there's any merit in maintaining a Personal Data Graph. Perhaps, if there is a standard way to define and [federate](https://www.apollographql.com/docs/apollo-server/federation/introduction/) mine and others' graphs together. 
+
+Consider this project me just _thinking out loud_. 
+
 ## Spotify
 
-A collection of operations related to me on Spotify.
+A collection of operations related to me on Spotify. Read about [how this works here](https://khalilstemmler.com/articles/tutorials/getting-the-currently-playing-song-spotify/).
 
 ### Get my currently playing song
 
