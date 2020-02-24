@@ -1,6 +1,6 @@
 
-import { CurrentSongPlayingResult } from '../../../shared/infra/graphql/generated/types';
-import { Mapper } from '../../../shared/core/mapper';
+import { CurrentSongPlayingResult } from '@/shared/infra/graphql/generated/types';
+import { Mapper } from '@/shared/core/mapper';
 
 export class CurrentSongPlayingResultMap implements Mapper<CurrentSongPlayingResult> {
 

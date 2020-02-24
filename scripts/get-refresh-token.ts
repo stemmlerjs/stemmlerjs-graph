@@ -1,6 +1,6 @@
 
 require('dotenv').config()
-import { spotifyService } from '../src/modules/spotify/services'
+import { spotifyService } from '@/modules/spotify/services'
 
 const args = process.argv;
 const providedCode = args.length === 3 && !!args[2] === true;

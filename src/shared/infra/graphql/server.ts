@@ -1,7 +1,7 @@
 
 import { ApolloServer as ApolloServerLambda } from 'apollo-server-lambda';
 import { ApolloServer, gql } from 'apollo-server';
-import { getCurrentSong } from '../../../modules/spotify/useCases/getCurrentSongPlaying';
+import { getCurrentSong } from '@/modules/spotify/useCases/getCurrentSongPlaying';
 
 const resolvers = {
   Query: {
