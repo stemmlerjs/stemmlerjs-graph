@@ -5,6 +5,9 @@ import { getCurrentSong } from '../../../modules/spotify/useCases/getCurrentSong
 
 const resolvers = {
   Query: {
+    spotify: () => ({})
+  },
+  Spotify: {
     // TODO: Let's apply some strict typing to these resolvers as well. 
     spotifyGetCurrentSongPlaying: async () => {
       const currentSongResult = await getCurrentSong.execute();
@@ -36,8 +39,12 @@ const typeDefs = gql`
     isCurrentlyPlaying: Boolean!
   }
 
-  type Query {
+  type Spotify {
     spotifyGetCurrentSongPlaying: CurrentSongPlayingResult
+  }
+
+  type Query {
+    spotify: Spotify!
   }
 `
 
