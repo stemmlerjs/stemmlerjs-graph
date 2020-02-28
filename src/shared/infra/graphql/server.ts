@@ -5,16 +5,12 @@ import { getCurrentSong } from '../../../modules/spotify/useCases/getCurrentSong
 
 const resolvers = {
   Query: {
-    spotify: () => ({})
-  },
-  Spotify: {
-    // TODO: Let's apply some strict typing to these resolvers as well. 
     spotifyGetCurrentSongPlaying: async () => {
       const currentSongResult = await getCurrentSong.execute();
-      return currentSongResult.isRight() ? currentSongResult.value : null
+      return currentSongResult.isRight() ? currentSongResult.value : null;
     }
   }
-}
+};
 
 const typeDefs = gql`
   
@@ -39,14 +35,10 @@ const typeDefs = gql`
     isCurrentlyPlaying: Boolean!
   }
 
-  type Spotify {
+  type Query {
     spotifyGetCurrentSongPlaying: CurrentSongPlayingResult
   }
-
-  type Query {
-    spotify: Spotify!
-  }
-`
+`;
 
 function createLambdaServer () {
   return new ApolloServerLambda({
