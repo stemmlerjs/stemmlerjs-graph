@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "nodemon",
-    "get-refresh-token": "ts-node scripts/get-refresh-token.ts",
+    "get-refresh-token": "ts-node -r tsconfig-paths/register scripts/get-refresh-token.ts",
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "author": "",
@@ -24,6 +24,7 @@
     "apollo-server": "^2.10.1",
     "apollo-server-lambda": "^2.10.1",
     "axios": "^0.19.2",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "tsconfig-paths": "^3.9.0"
   }
 }

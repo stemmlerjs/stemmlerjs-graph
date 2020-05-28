@@ -13,12 +13,19 @@
     "typeRoots" : ["./node_modules/@types", "./src/@types"],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
     "src/*.ts",
     "src/**/*.ts",
-    "src/**/*.js"
+    "src/**/*.js",
+    "scripts/**/*.ts"
   ],
   "exclude": [
     "node_modules",

@@ -1,6 +1,6 @@
 
 import axios from 'axios'
-import { CurrentSongPlayingResult } from '../../../shared/infra/graphql/generated/types';
+import { CurrentSongPlayingResult } from '@/shared/infra/graphql/generated/types';
 import { CurrentSongPlayingResultMap } from '../mappers/currentPlayingSongMap';
 
 type AccessToken = string;
