@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@graphql-codegen/cli": "^1.12.2",
+    "@graphql-codegen/cli": "^1.21.8",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
